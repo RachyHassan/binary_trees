@@ -5,7 +5,7 @@
 /**
  * print_num - prints a number
  *
- * @n: number to be printed
+ * @n: number to be printed.
  */
 void print_num(int n)
 {
@@ -15,12 +15,11 @@ void print_num(int n)
 /**
  * main - Entry point
  *
- * Return: Always 0 (success)
+ * Return: always 00 (success)
  */
 int main(void)
 {
 	binary_tree_t *root;
-
 	root = binary_tree_node(NULL, 98);
 	root->left = binary_tree_node(root, 12);
 	root->right = binary_tree_node(root, 402);
@@ -30,6 +29,6 @@ int main(void)
 	root->right->right = binary_tree_node(root->right, 512);
 	
 	binary_tree_print(root);
-	binary_tree_preorder(root, &print_num);
+	binary_tree_inorder(root, &print_num);
 	return (0);
 }
